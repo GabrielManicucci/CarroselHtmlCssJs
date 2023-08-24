@@ -29,14 +29,18 @@ main {
 
 .gallery-wrapper {
   position: relative;
-  padding: 20px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
 }
 
 button {
   position: absolute;
   border: none;
-  opacity: 0.4;
+  opacity: 0.5;
   z-index: 10;
+  border-radius: 5px;
+  width: 100px;
 }
 
 button:hover {
@@ -70,8 +74,9 @@ button img {
   flex-flow: row nowrap;
   overflow-x: auto;
   overflow-y: hidden;
-  gap: 24px;
-  /* scroll-snap-type: x mandatory; */
+  gap: 30px;
+  padding: 24px;
+  /* scroll-snap-type: x mandatory; OBS: how to center a div at a container with css */
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -81,11 +86,28 @@ button img {
 }
 
 .item {
-  border-radius: 16px;
+  /* border-radius: 16px; */
   opacity: 0.4;
 }
 
 .current-item {
-  /* scroll-snap-align: center; */
+  /* scroll-snap-align: center; OBS: how to center a div at a container with css  */
   opacity: 1;
+}
+
+.item img {
+  border-radius: 16px;
+}
+
+.headline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  padding-inline: 40px;
+  padding-top: 26px;
+}
+
+.headline h2 {
+  margin-bottom: 8px;
 }
